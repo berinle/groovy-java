@@ -2,7 +2,7 @@ class GroovyComponent {
   def helloWorld() {
     println 'hello world!'
 
-    def proc = ['/bin/zsh', '-c', '/usr/local/bin/docker-machine env dev'].execute()
+    def proc = ['/bin/zsh', '-c', '/usr/local/bin/docker-machine ls'].execute()
     def sout = new StringBuilder(), serr = new StringBuilder()
 
     proc.waitForProcessOutput(sout, serr)
